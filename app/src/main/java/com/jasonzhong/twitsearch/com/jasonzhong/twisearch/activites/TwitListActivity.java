@@ -150,7 +150,6 @@ public class TwitListActivity extends AppCompatActivity {
             searchAdapter.setDisplayList(searchList);
             searchAdapter.notifyDataSetChanged();
             searchRecyclerView.setVisibility(View.VISIBLE);
-            //setListAdapter(adapter);
             pDialog.dismiss();
         }
 
@@ -261,7 +260,6 @@ public class TwitListActivity extends AppCompatActivity {
             } catch (UnsupportedEncodingException ex) {
                 Log.i("UnsupportedEncodingEx", ex.toString());
             } catch (IllegalStateException ex1) {
-                Toast.makeText(getApplicationContext(), "Couldn't find specified user : ", Toast.LENGTH_SHORT).show();
                 Log.i("IllegalStateException", ex1.toString());
             }
             return results;
