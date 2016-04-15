@@ -37,7 +37,6 @@ public class PicassoImageViewConfig {
     }
 
     public PicassoImageViewConfig imageUrl(String imageUrl) {
-        // TODO: 2016-03-02 Revisit https header issue, should be done on the backend
         String imageUrlString = imageUrl.startsWith("https:") || imageUrl.startsWith("http:") ? "" : "https:";
         imageUrlString += imageUrl;
         this.imageUrl = imageUrlString;
