@@ -19,7 +19,6 @@ import butterknife.ButterKnife;
 public class PicassoImageView extends RelativeLayout {
     @Bind(R.id.picasso_image_view) ImageView picassoImageView;
 
-    //// FIXME: 2016-01-07 Set debug flags from conf
     boolean debugIndicators = false;
 
     protected ImageView getImageView() {
