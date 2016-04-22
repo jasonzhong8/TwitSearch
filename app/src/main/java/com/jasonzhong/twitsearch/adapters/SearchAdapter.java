@@ -22,16 +22,13 @@ import java.util.List;
 public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.CustomViewHolder> {
     static Context context;
     static private List<Search> searchItems;
-    //LayoutInflater inflater;
 
     public SearchAdapter(Context context) {
         this.context = context;
-        //inflater = LayoutInflater.from(context);
     }
 
     @Override
     public CustomViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-        //View view = inflater.inflate(R.layout.search_item, viewGroup, false);
         // create a new view
         View view = LayoutInflater.from(viewGroup.getContext())
                 .inflate(R.layout.search_item, viewGroup, false);
@@ -47,7 +44,6 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.CustomView
 
             @Override
             public void onClick(View v) {
-                //Toast.makeText(context, "Clicked: "+i, Toast.LENGTH_SHORT).show();
                 Intent i = new Intent();
                 Bundle b = new Bundle();
                 b.putSerializable("SearchDetail", searchItem);
@@ -57,7 +53,6 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.CustomView
             }
         });
 
-        //Setting textView content
         customViewHolder.avatarImageView.setImageUrl(searchItem.getUser().getProfileImageUrl(), null);
         ;
         customViewHolder.nameTextView.setText(searchItem.getUser().getName());
