@@ -10,8 +10,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.jasonzhong.twitsearch.R;
-import com.jasonzhong.twitsearch.com.jasonzhong.twisearch.activites.TwitDetailActivity;
-import com.jasonzhong.twitsearch.com.jasonzhong.twisearch.activites.TwitListActivity;
+import com.jasonzhong.twitsearch.activites.TwitDetailActivity;
 import com.jasonzhong.twitsearch.custom_views.PicassoImageView;
 import com.jasonzhong.twitsearch.models.Search;
 

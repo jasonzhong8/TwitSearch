@@ -1,4 +1,4 @@
-package com.jasonzhong.twitsearch.com.jasonzhong.twisearch.activites;
+package com.jasonzhong.twitsearch.activites;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

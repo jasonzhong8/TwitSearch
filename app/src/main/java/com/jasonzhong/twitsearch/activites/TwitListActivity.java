@@ -1,4 +1,4 @@
-package com.jasonzhong.twitsearch.com.jasonzhong.twisearch.activites;
+package com.jasonzhong.twitsearch.activites;
 
 import android.app.ProgressDialog;
 import android.content.Context;
