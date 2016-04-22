@@ -99,7 +99,7 @@ public class TwitListActivity extends AppCompatActivity {
     }
 
     private class DownloadTwitterTask extends AsyncTask<String, Void, String> {
-        //TODO: Following strings can be retrieved from resource files
+        //TODO: Following strings can be retrieved from resource/configuration files
         final static String CONSUMER_KEY = "kbspDjgn3qa3HAG9BREv78Jl8";
         final static String CONSUMER_SECRET = "BeacS45HtTN1VoIfKyd6G7fB9QSsS4fxikczVuTRVnSfvXuZtQ";
 
@@ -150,7 +150,7 @@ public class TwitListActivity extends AppCompatActivity {
             searchRecyclerView.setVisibility(View.VISIBLE);
             pDialog.dismiss();
         }
-
+        //TODO: Following result parsing code need to be separated from activities
         // converts a string of JSON data into a SearchResults object
         private Searches jsonToSearches(String result) {
             Searches searches = null;
@@ -184,6 +184,7 @@ public class TwitListActivity extends AppCompatActivity {
             return auth;
         }
 
+        //TODO: Following networking related code need to be separated from activities
         private String getResponseBody(HttpRequestBase request) {
             StringBuilder sb = new StringBuilder();
             try {
