@@ -66,6 +66,7 @@ public class TwitListActivity extends AppCompatActivity {
         searchButton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
+                //hide keypad
                 InputMethodManager inputManager = (InputMethodManager) getSystemService(TwitListActivity.this.INPUT_METHOD_SERVICE);
                 inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
 
@@ -81,7 +82,6 @@ public class TwitListActivity extends AppCompatActivity {
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         searchRecyclerView.setLayoutManager(mLayoutManager);
 
-        searchRecyclerView.setLayoutManager(mLayoutManager);
         searchRecyclerView.setAdapter(searchAdapter);
     }
 
@@ -140,9 +140,7 @@ public class TwitListActivity extends AppCompatActivity {
             }
             List<Search> searchList = new ArrayList<Search>();
 
-            // lets write the results to the console as well
             for (Search search : searches) {
-                Log.i(LOG_TAG, search.getText());
                 searchList.add(search);
             }
 
@@ -181,7 +179,6 @@ public class TwitListActivity extends AppCompatActivity {
                     auth.token_type = session.getString("token_type");
                 } catch (Exception e) {
                     Log.e("jsonToAuthenticated", "Error retrieving JSON Authenticated Values : " + e.getMessage());
-                    e.printStackTrace();
                 }
             }
             return auth;
@@ -238,7 +235,7 @@ public class TwitListActivity extends AppCompatActivity {
                 httpPost.setHeader("Content-Type", "application/x-www-form-urlencoded;charset=UTF-8");
                 httpPost.setEntity(new StringEntity("grant_type=client_credentials"));
                 String rawAuthorization = getResponseBody(httpPost);
-                Log.i("getTwitterStream", "rawAuthoruzation : " + rawAuthorization);
+
                 Authenticated auth = jsonToAuthenticated(rawAuthorization);
 
                 // Applications should verify that the value associated with the
